@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main() {
-    setlocale(LC_ALL, "pt_BR.UTF-8");
     char nome[50];
     int idade;
     char matricula[20];
     char endereco[100];
     char curso[50];
     char periodo[20];
+    char disciplinas[100];
     
     printf("Cadastro de Aluno\n");
     
@@ -35,14 +34,21 @@ int main() {
     printf("Período: ");
     scanf(" %[^\n]", periodo);
     fflush(stdin);
+
+    printf("Disciplinas: ");
+    scanf(" %[^\n]", disciplinas);
+    fflush(stdin);
     
+    printf("________________________\n");
     printf("\nInformações do Aluno:\n");
+    printf("________________________\n");
     printf("Nome: %s\n", nome);
     printf("Idade: %d\n", idade);
     printf("Matrícula: %s\n", matricula);
     printf("Endereço: %s\n", endereco);
     printf("Curso: %s\n", curso);
     printf("Período: %s\n", periodo);
+    printf("Disciplinas: %s\n", disciplinas);
     
     return 0;
 }

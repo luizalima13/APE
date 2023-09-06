@@ -1,58 +1,29 @@
 #include <stdio.h>
-
+#include <math.h>
 int main()
 {
-    float tempo, salario, reajuste;
+    float a= 1, b = 10, c = -119, delta, x1, x2;
 
-    printf("Digite o salario:\n");
-    scanf("%f", &salario);
-    printf("Digite o tempo:\n");
-    scanf("%f", &tempo);
-
-    if (salario <= 500)
+    if (a == 0)
     {
-        reajuste = salario * 0.25 + salario;
-    } else if (salario <=1000)
+        printf("Nao é equacao de segundo grau");
+    }else{
+        delta = pow(b,2) - 4 * a * c;
+    }if (delta < 0)
     {
-        reajuste = salario * 0.20 + salario;
-    } else if (salario <=1500)
+        printf("Nao existe raiz real");
+    }else if (delta ==0)
     {
-        reajuste = salario * 0.15 + salario;
-    } else if (salario <=2000)
-    {
-        reajuste = salario * 0.10 + salario;
-    } else
-    {
-        reajuste = salario;
+        x1 = (-b + sqrt(delta))/(2*a);
+        printf("Raiz unica: %f", x1);
+    }else{
+        x1 = (-b + sqrt(delta))/(2*a);
+        x2 = (-b - sqrt(delta))/(2*a);
+        printf ("Duas raizes reais: x1 :%f, x2: %f",x1, x2);
     }
     
-    if (tempo <1)
-    {
-        printf("Sem bonus");
-    
-    } else if (tempo >+1 && tempo <=4)
-    {
-        reajuste += 100;
-    } else if (tempo >=4 && tempo < 7)
-    {
-        reajuste += 200;
-    } else if (tempo >=7 && tempo < 10)
-    {
-        reajuste += 300;
-    } else {
-        reajuste += 500;
-    }
-     if (tempo < 1 &&  salario >= 2000)
-     {
-        printf("Nao tem aumento");
-     }else{
-        printf("Salario com reajuste: %f", reajuste);
-     }
-     
     
     
-    
-
 
     return 0;
 }

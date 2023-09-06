@@ -2,20 +2,18 @@
 
 int main()
 {
-    int idade, tempoServico;
+    float nota1 = 7, nota2 = 8, nota3 = 5, mediaPonderada;
 
-    printf("Digite a idade:\n");
-    scanf("%d",&idade);
-    printf("Digite o tempo de servico:\n");
-    scanf("%d",&tempoServico);
+    mediaPonderada = (nota1 + nota2 + (nota3 * 2))/4;
 
-    if (idade >= 65 || tempoServico >= 30 || (idade>= 60 && tempoServico >= 25))
+    printf("Media do aluno e: %f", mediaPonderada);
+
+    if (mediaPonderada >= 7 )
     {
-        printf("Pode se aposentar");
+        printf("Aprovado");
     }else {
-        printf("Nao pode se aposentar");
+        printf("Reprovado");
     }
-    
     
     return 0;
 }

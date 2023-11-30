@@ -54,7 +54,7 @@ int main() {
     printf("Quantidade de respostas otimo: %d\n", quantidadeOtimo);
     printf("Diferenca percentual entre respostas bom e regular: %.2f%%\n", diferencaPercentual);
     printf("Media de idade das pessoas que responderam ruim: %.2f\n", mediaIdadeRuim);
-    printf("Percentagem de respostas pessimo: %.2f%% (Maior idade: %d)\n", percentualPessimo, maiorIdadePessimo);
+    printf("Porcentagem de respostas pessimo: %.2f%% (Maior idade: %d)\n", percentualPessimo, maiorIdadePessimo);
     printf("Diferenca de idade entre a maior idade que respondeu otimo e a maior idade que respondeu ruim: %d\n", diferencaIdadeOtimoRuim);
 
     return 0;
